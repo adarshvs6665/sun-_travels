@@ -27,7 +27,7 @@ const MainWrapper = styled.div`
   width: 60px;
   z-index: 95;
   position: absolute;
-  height: 100vh;
+  height: 70vh;
   border-radius: 1px;
   display: flex;
   flex-direction: column;

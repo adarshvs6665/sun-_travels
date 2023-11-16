@@ -5,12 +5,14 @@ import Navbar from '../Components/Navbar';
 import TrensingNowTextBox from '../Components/TrensingNowTextBox';
 import LandingPageSectionForTrending from '../Components/LandingPageSectionForTrending';
 import SideBar from '../Components/SideBar';
+import BestSellingSection from '../Components/BestSellingSection';
 
 export default function LandingPage() {
   return (
     <WrapperCard>
       <SideBar/>
     <LandingCloudsSection/>
+    <BestSellingSection/>
     <TrensingNowTextBox/>
     <LandingPageSectionForTrending/>
     <TrensingNowTextBox/>
@@ -23,4 +25,5 @@ export default function LandingPage() {
 const WrapperCard = styled.div`
   background-color: #fff;
   height: 100vh;
+ 
 `;

@@ -1,4 +1,4 @@
-import Logo from "./assets/Logo.svg";
+import Logo from "./assets/sun-logo.svg";
 
 import styled from "styled-components";
 import img1 from "./assets/1.png";

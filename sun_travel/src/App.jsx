@@ -7,7 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./Components/About";
 import Project from "./Components/Project";
 import Navbar from "./Components/Navbar";
-import NavbarStyle from "./Components/NavbarStyle";
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
