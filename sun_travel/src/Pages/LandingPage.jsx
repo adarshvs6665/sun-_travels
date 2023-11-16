@@ -10,7 +10,7 @@ import BestSellingSection from '../Components/BestSellingSection';
 export default function LandingPage() {
   return (
     <WrapperCard>
-      <SideBar/>
+      {/* <SideBar/> */}
     <LandingCloudsSection/>
     <BestSellingSection/>
     <TrensingNowTextBox/>
