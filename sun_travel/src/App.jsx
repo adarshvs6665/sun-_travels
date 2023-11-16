@@ -30,7 +30,6 @@ function App() {
         <>
           <div>
             <Navbar />
-            {/* <NavbarStyle/> */}
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/about" element={<About />} />

@@ -11,6 +11,8 @@ import img6 from "./assets/6.png";
 // import { Link as ScrollLink, Element } from "react-scroll";
 import { Link as LinkRouter } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
+import { useEffect, useState } from "react";
+import NavbarStyle from "./NavbarStyle";
 export default function Navbar() {
   const Menus = [
     { name: "Home", icon: "home-outline", dis: "translate-x-0" },
@@ -19,11 +21,28 @@ export default function Navbar() {
     { name: "Photos", icon: "camera-outline", dis: "translate-x-48" },
     { name: "Settings", icon: "settings-outline", dis: "translate-x-64" },
   ];
+  const [navbar, setNavbar] = useState(false);
+  console.log(navbar, "navbar");
+  useEffect(() => {
+    const handleScroll = () => {
+      console.log(window.scrollY, "ttttttttt");
+      if (window.scrollY >= 100) {
+        setNavbar(true);
+      } else {
+        setNavbar(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <MainWrapper>
       {/* <Slide top> */}
       <Wrapper>
-        <HeaderWrapper>
+        <HeaderWrapper className={navbar ? "navbar active" : "navbar"}>
           <HeaderLogo>
             <img src={Logo} />
             <HeaderMenu>
@@ -53,11 +72,7 @@ export default function Navbar() {
             </HeaderMenu>
           </HeaderLogo>
           <NavPagesWrapper>
-            <LinkRouter to="/">Home</LinkRouter>
-
-            <LinkRouter to="/about">Page2</LinkRouter>
-
-            <LinkRouter to="/project">Page3</LinkRouter>
+            <NavbarStyle />
           </NavPagesWrapper>
         </HeaderWrapper>
       </Wrapper>
@@ -67,7 +82,7 @@ export default function Navbar() {
 const NavPagesWrapper = styled.div`
   a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
     margin-left: 10px;
   }
   .pageName {
@@ -81,7 +96,7 @@ const MenuBlock = styled.div`
 `;
 
 const MainWrapper = styled.div`
-  padding: 20px 0;
+  /* padding: 20px 0; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -115,16 +130,7 @@ const MainWrapper = styled.div`
 const Wrapper = styled.div`
   width: 100%;
 `;
-const HeaderWrapper = styled.div`
-  background: #001499;
-  justify-content: space-between;
-  border-radius: 15px;
-  align-items: center;
-  padding: 10px 20px;
-  max-width: 95%;
-  margin: 0 auto;
-  display: flex;
-`;
+const HeaderWrapper = styled.div``;
 const HeaderLogo = styled.div`
   display: flex;
   align-items: center;
