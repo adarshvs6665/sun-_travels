@@ -9,7 +9,7 @@ import img5 from "./assets/5.png";
 import img6 from "./assets/6.png";
 // import { Link } from "react-router-dom";
 // import { Link as ScrollLink, Element } from "react-scroll";
-import { Link as LinkRouter } from "react-router-dom";
+import { Link, Link as LinkRouter } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
 import { useEffect, useState } from "react";
 import NavbarStyle from "./NavbarStyle";
@@ -72,7 +72,12 @@ export default function Navbar() {
             </HeaderMenu>
           </HeaderLogo>
           <NavPagesWrapper>
-            <NavbarStyle />
+            <Link className="pageName" to='/'>Home</Link>
+            <Link className="pageName"to='/project'>Flight</Link>
+            <Link className="pageName" to='/'>Visa</Link>
+            <Link className="pageName" to='/'>Tour</Link>
+            <Link className="pageName" to='/'>Umra</Link>
+            <Link className="pageName" to='/'>Hotel</Link>
           </NavPagesWrapper>
         </HeaderWrapper>
       </Wrapper>
@@ -80,10 +85,14 @@ export default function Navbar() {
   );
 }
 const NavPagesWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     margin-left: 10px;
+    cursor: pointer;
   }
   .pageName {
     padding-top: 6px;
