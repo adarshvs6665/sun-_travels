@@ -26,7 +26,7 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       console.log(window.scrollY, "ttttttttt");
-      if (window.scrollY >= 100) {
+      if (window.scrollY >= 400) {
         setNavbar(true);
       } else {
         setNavbar(false);
