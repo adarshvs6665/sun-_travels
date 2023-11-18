@@ -13,6 +13,8 @@ import { Link, Link as LinkRouter } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
 import { useEffect, useState } from "react";
 import NavbarStyle from "./NavbarStyle";
+import { atestationDropdown, certificateDropdown, navItems, tourDropdown } from "./NavItems";
+import Dropdown from "./TourDropDown";
 export default function Navbar() {
   const Menus = [
     { name: "Home", icon: "home-outline", dis: "translate-x-0" },
@@ -21,6 +23,7 @@ export default function Navbar() {
     { name: "Photos", icon: "camera-outline", dis: "translate-x-48" },
     { name: "Settings", icon: "settings-outline", dis: "translate-x-64" },
   ];
+  
   const [navbar, setNavbar] = useState(false);
   console.log(navbar, "navbar");
   useEffect(() => {
@@ -37,47 +40,68 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const [tourDropdownShow, setourDropdownShow] = useState(false);
+  const [attestationDropdownShow, setAttestationDropdownShow] = useState(false);
+  const [certificateDropdownShow, setCertificateDropdownShow] = useState(false);
   return (
     <MainWrapper>
       {/* <Slide top> */}
       <Wrapper>
         <HeaderWrapper className={navbar ? "navbar active" : "navbar"}>
           <HeaderLogo>
-            <img src={Logo} />
-            <HeaderMenu>
-              <MenuBlock>
-                <HeaderUl>
-                  <HeaderLi>
-                    <img className="rotate" src={img1} alt="" />
-                  </HeaderLi>
-                  <HeaderLi>
-                    <img className="rotate" src={img2} alt="" />
-                  </HeaderLi>
-                  <HeaderLi>
-                    <img className="rotate" src={img3} alt="" />
-                  </HeaderLi>
-                  <HeaderLi>
-                    <img className="rotate" src={img4} alt="" />
-                  </HeaderLi>
-                  <HeaderLi>
-                    <img className="rotate" src={img5} alt="" />
-                  </HeaderLi>
-                  <HeaderLi className="rotate">
-                    <img src={img6} alt="" />
-                  </HeaderLi>
-                </HeaderUl>
-                <p>(Approved by Govt. of India, Ministry of Tourism)</p>
-              </MenuBlock>
-            </HeaderMenu>
+            <Link to="/" className="navbar-logo">
+              <img src={Logo} />
+            </Link>
           </HeaderLogo>
           <NavPagesWrapper>
-            <Link className="pageName" to='/'>Home</Link>
-            <Link className="pageName"to='/project'>Flight</Link>
-            <Link className="pageName" to='/'>Visa</Link>
-            <Link className="pageName" to='/'>Tour</Link>
-            <Link className="pageName" to='/'>Umra</Link>
-            <Link className="pageName" to='/'>Hotel</Link>
+            <ul className="nav-items">
+              {navItems.map((item) => {
+                if (item.title === "Tours") {
+                  return (
+                    <li
+                      key={item.id}
+                      className={item.cName}
+                      onMouseEnter={() => setourDropdownShow(true)}
+                      onMouseLeave={() => setourDropdownShow(false)}
+                    >
+                      <Link to={item.path}>{item.title}</Link>
+                      {tourDropdownShow && <Dropdown data={tourDropdown} />}
+                    </li>
+                  );
+                }
+                if (item.title === "Atestation") {
+                  return (
+                    <li
+                      key={item.id}
+                      className={item.cName}
+                      onMouseEnter={() => setAttestationDropdownShow(true)}
+                      onMouseLeave={() => setAttestationDropdownShow(false)}
+                    >
+                      <Link to={item.path}>{item.title}</Link>
+                      {attestationDropdownShow && <Dropdown data={atestationDropdown} />}
+                    </li>
+                  );
+                }
+                if (item.title === "Certificate") {
+                  return (
+                    <li
+                      key={item.id}
+                      className={item.cName}
+                      onMouseEnter={() => setCertificateDropdownShow(true)}
+                      onMouseLeave={() => setCertificateDropdownShow(false)}
+                    >
+                      <Link to={item.path}>{item.title}</Link>
+                      {certificateDropdownShow && <Dropdown data={certificateDropdown} />}
+                    </li>
+                  );
+                }
+                return (
+                  <li key={item.id} className={item.cName}>
+                    <Link to={item.path}>{item.title}</Link>
+                  </li>
+                );
+              })}
+            </ul>
           </NavPagesWrapper>
         </HeaderWrapper>
       </Wrapper>
@@ -88,12 +112,7 @@ const NavPagesWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  a {
-    text-decoration: none;
-    color: #fff;
-    margin-left: 10px;
-    cursor: pointer;
-  }
+  gap: 10px;
   .pageName {
     padding-top: 6px;
     display: flex;
@@ -145,6 +164,7 @@ const HeaderLogo = styled.div`
   align-items: center;
   img {
     max-height: 40px;
+    min-width: 120px;
   }
 `;
 const HeaderUl = styled.ul`
