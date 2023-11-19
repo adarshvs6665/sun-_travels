@@ -6,16 +6,18 @@ import TrensingNowTextBox from '../Components/TrensingNowTextBox';
 import LandingPageSectionForTrending from '../Components/LandingPageSectionForTrending';
 import SideBar from '../Components/SideBar';
 import BestSellingSection from '../Components/BestSellingSection';
+import Airoplane from './Airoplane';
 
 export default function LandingPage() {
   return (
     <WrapperCard>
+      {/* <Airoplane/> */}
       {/* <SideBar/> */}
-    <LandingCloudsSection/>
+     <LandingCloudsSection/> 
     <BestSellingSection/>
     <TrensingNowTextBox/>
     <LandingPageSectionForTrending/>
-    <TrensingNowTextBox/>
+    <TrensingNowTextBox/> 
     
   </WrapperCard>
 
