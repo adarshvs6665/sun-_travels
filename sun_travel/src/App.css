@@ -133,6 +133,9 @@
   padding: 16px;
 }
 .feed-card {
-  background: radial-gradient(black, transparent);
+  background: radial-gradient(#66339961, #0000ff54);
   margin: 40px 80px;
+}
+.card-wrapper {
+  background: #001499a1;
 }

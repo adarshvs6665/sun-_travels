@@ -10,7 +10,7 @@ const FeedbackCard = ({
   company,
   image,
 }) => (
-  <div className="bg-yellow-500 p-10 rounded-3xl xs:w-[320px] w-full">
+  <div className="card-wrapper p-10 rounded-3xl xs:w-[320px] w-full">
     <p className="text-white font-black text-[48px]">" "</p>
 
     <div className="mt-1">
@@ -40,7 +40,7 @@ const Feedbacks = () => {
   return (
     <div className={`mt-12 feed-card rounded-[20px]`}>
       <div
-        className={`bg-gray-300 rounded-2xl sm:px-16 px-6 sm:py-16 py-10 min-h-[300px]`}
+        className={`bg-transparent rounded-2xl sm:px-16 px-6 sm:py-16 py-10 min-h-[300px]`}
       >
         <div>
           <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">
