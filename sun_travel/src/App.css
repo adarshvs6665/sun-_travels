@@ -42,16 +42,97 @@
 }
 .navbar {
   background: transparent;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 100px;
   align-items: center;
   padding: 10px 80px;
   transition: background 250ms ease-in;
   margin: 0 auto;
   display: flex;
+  height: 10vh;
 }
 
 .navbar.active {
   background: #001499;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   transition: background 250ms ease-in;
+}
+.nav-items {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  width: 70vw;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  transition: background 250ms ease-in;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  margin-right: 2rem;
+  padding: 6px 16px;
+  border-radius: 10px;
+  transition: background 250ms ease-in;
+}
+
+.nav-item a:hover {
+  background: rgb(234, 234, 234);
+  color: #000;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.services-submenu {
+  min-width: 10rem;
+  position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  top: 67px;
+  list-style: none;
+  text-align: start;
+  border-radius: 10px;
+}
+
+.services-submenu li {
+  background: rgb(234, 234, 234);
+  cursor: pointer;
+}
+.services-submenu li:first-child {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.services-submenu li:last-child {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.services-submenu li a {
+  margin: 0 !important;
+}
+
+.services-submenu li a:hover {
+  background: rgb(185, 188, 188);
+  border-radius: 10px;
+  box-shadow: none !important;
+}
+
+.services-submenu.clicked {
+  display: none;
+}
+
+.submenu-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000 !important;
+  padding: 16px;
+}
+.feed-card {
+  background: radial-gradient(black, transparent);
+  margin: 40px 80px;
 }
