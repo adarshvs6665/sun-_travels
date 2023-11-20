@@ -132,3 +132,7 @@
   color: #000 !important;
   padding: 16px;
 }
+.feed-card {
+  background: radial-gradient(black, transparent);
+  margin: 40px 80px;
+}
