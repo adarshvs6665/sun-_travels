@@ -168,7 +168,7 @@ export default function BestSellingSection() {
         responsive={responsive}
         arrows={true}
         infinite={true}
-        // autoPlay={true}
+        autoPlay={true}
         autoPlaySpeed={2000}
         customTransition="transform 500ms ease-in-out"
         transitionDuration={500}
@@ -331,9 +331,9 @@ const ImgStyle = styled.img`
   transition: transform 0.3s ease;
 `;
 const Wrapper = styled.div`
-  height: 100vh;
+height: calc(100vh - 170px);
   bottom: 170px;
-
+/* background-color: red; */
   position: relative;
 `;
 const AnnouncemnetTitle = styled.div`

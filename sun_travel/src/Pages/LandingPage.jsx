@@ -8,6 +8,8 @@ import SideBar from '../Components/SideBar';
 import BestSellingSection from '../Components/BestSellingSection';
 import Feedbacks from '../Components/FeedBack';
 import Airoplane from './Airoplane';
+import TabsExclusive from '../Components/TabsExclusive/TabsExclusive';
+// import { TabsExclusive } from '../Components/TabsExclusive/TabsExclusive';
 
 export default function LandingPage() {
   return (
@@ -16,7 +18,9 @@ export default function LandingPage() {
       {/* <SideBar/> */}
      <LandingCloudsSection/> 
     <BestSellingSection/>
-    <TrensingNowTextBox/>
+    {/* <TrensingNowTextBox/> */}
+   <TabsExclusive/>
+   <TrensingNowTextBox/> 
     <LandingPageSectionForTrending/>
     <TrensingNowTextBox/>
     <Feedbacks />

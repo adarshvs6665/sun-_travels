@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   max-width: 35rem;
   height: 30rem;
-  margin: 6rem auto;
+  margin: 0 auto;
   .wait {
   margin: 5rem 0;
 }
