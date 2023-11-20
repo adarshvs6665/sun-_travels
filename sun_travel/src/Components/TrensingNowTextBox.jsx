@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 function TrensingNowTextBox() {
   return (
-    <TextWrapper className="text-box">
+    <TextWrapper className="text-box"  id="last">
       <h3>First Class Ticket</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores

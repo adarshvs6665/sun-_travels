@@ -117,17 +117,17 @@ export default function BestSellingSection() {
   const responsive = {
     desktop: {
       breakpoint: { max: 1599, min: 1025 },
-      items: 5,
+      items: 4,
       paritialVisibilityGutter: 20,
     },
     desktopLarge: {
       breakpoint: { max: 3000, min: 1600 },
-      items: 6,
+      items: 4,
       paritialVisibilityGutter: 20,
     },
     tabletLarge: {
       breakpoint: { max: 1024, min: 768 },
-      items: 5,
+      items: 4,
       paritialVisibilityGutter: -10,
     },
     tablet: {
@@ -332,7 +332,7 @@ const ImgStyle = styled.img`
 `;
 const Wrapper = styled.div`
   height: 100vh;
-  bottom: 200px;
+  bottom: 170px;
 
   position: relative;
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import moveingClouds from "./assets/videoClouds.mp4";
+import Airoplane from "../Pages/Airoplane";
 
 function LandingCloudsSection() {
   return (
@@ -12,7 +13,9 @@ function LandingCloudsSection() {
         type="video/mp4"
       ></FullScreenVideo>
       <BackDrop></BackDrop>
+      {/* <Airoplane/> */}
     </FullHeightSection>
+  
   );
 }
 
@@ -32,7 +35,7 @@ const FullScreenVideo = styled.video`
 `;
 const BackDrop = styled.div`
   position: absolute;
-  background: rgb(0 0 0 / 20%);
+  /* background: rgb(0 0 0 / 20%); */
   height: 70%;
   top: 0;
   left : 0;

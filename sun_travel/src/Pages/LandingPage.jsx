@@ -7,18 +7,21 @@ import LandingPageSectionForTrending from '../Components/LandingPageSectionForTr
 import SideBar from '../Components/SideBar';
 import BestSellingSection from '../Components/BestSellingSection';
 import Feedbacks from '../Components/FeedBack';
+import Airoplane from './Airoplane';
 
 export default function LandingPage() {
   return (
     <WrapperCard>
+      {/* <Airoplane/> */}
       {/* <SideBar/> */}
-    <LandingCloudsSection/>
+     <LandingCloudsSection/> 
     <BestSellingSection/>
     <TrensingNowTextBox/>
     <LandingPageSectionForTrending/>
     <TrensingNowTextBox/>
     <Feedbacks />
 
+    <TrensingNowTextBox/> 
     
   </WrapperCard>
 

@@ -49,6 +49,7 @@ const Wrapper = styled.div`
   position: absolute;
   margin: 0 auto;
   width: 100%;
+  left: 153px;
 }
 
 .plane-img {
