@@ -1,60 +1,77 @@
+import dropDownArrow from "./assets/dropDown.png";
+import more from "./assets/more.png";
 export const navItems = [
   {
     id: 1,
     title: "Home",
     path: "./",
     cName: "nav-item",
+    icon: '',
   },
+
   {
     id: 2,
-    title: "Flight",
-    path: "./Flight",
-    cName: "nav-item",
-  },
-  {
-    id: 3,
     title: "Visa",
     path: "./Visa",
     cName: "nav-item",
+    icon: '',
   },
   {
-    id: 4,
+    id: 3,
     title: "Tours",
     path: "./Tours",
     cName: "nav-item",
+    icon: dropDownArrow,
   },
+
   {
-    id: 5,
-    title: "Umra",
-    path: "./Umra",
-    cName: "nav-item",
-  },
-  {
-    id: 6,
-    title: "Cruise",
-    path: "./Cruise",
-    cName: "nav-item",
-  },
-  {
-    id: 7,
+    id: 4,
     title: "Atestation",
     path: "./Atestation",
     cName: "nav-item",
+    icon: dropDownArrow,
   },
   {
-    id: 8,
+    id: 5,
     title: "Certificate",
     path: "./Certificate",
     cName: "nav-item",
+    icon: dropDownArrow,
   },
   {
-    id: 9,
-    title: "Embassy",
-    path: "./Embassy",
-    cName: "nav-item",
+    id: 6,
+    title: '',
+    path: "./",
+    cName: "nav-item more-icon",
+    icon: more,
   },
 ];
-
+export const moreDropDown = [
+  {
+    id: 1,
+    title: "Umra",
+    path: "./Umra",
+    cName: "submenu-item",
+  },
+  {
+    id: 2,
+    title: "Cruise",
+    path: "./Cruise",
+    cName: "submenu-item",
+  },
+  {
+    id: 3,
+    title: "Embassy",
+    path: "./Embassy",
+    cName: "submenu-item",
+  },
+  {
+    id: 4,
+    title: "Flight",
+    path: "./Flight",
+    cName: "submenu-item",
+  },
+];
 export const tourDropdown = [
   {
     id: 1,

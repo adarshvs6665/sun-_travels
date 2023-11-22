@@ -1,39 +1,33 @@
-
-import styled from 'styled-components';
-import LandingCloudsSection from '../Components/LandingCloudsSction';
-import Navbar from '../Components/Navbar';
-import TrensingNowTextBox from '../Components/TrensingNowTextBox';
-import LandingPageSectionForTrending from '../Components/LandingPageSectionForTrending';
-import SideBar from '../Components/SideBar';
-import BestSellingSection from '../Components/BestSellingSection';
-import Feedbacks from '../Components/FeedBack';
-import Airoplane from './Airoplane';
-import TabsExclusive from '../Components/TabsExclusive/TabsExclusive';
+import styled from "styled-components";
+import LandingCloudsSection from "../Components/LandingCloudsSction";
+import Navbar from "../Components/Navbar";
+import TrensingNowTextBox from "../Components/TrensingNowTextBox";
+import LandingPageSectionForTrending from "../Components/LandingPageSectionForTrending";
+import SideBar from "../Components/SideBar";
+import BestSellingSection from "../Components/BestSellingSection";
+import Feedbacks from "../Components/FeedBack";
+import Airoplane from "./Airoplane";
+import TabsExclusive from "../Components/TabsExclusive/TabsExclusive";
 // import { TabsExclusive } from '../Components/TabsExclusive/TabsExclusive';
 
 export default function LandingPage() {
   return (
     <WrapperCard>
-      {/* <Airoplane/> */}
+      {/* <Airoplane /> */}
       {/* <SideBar/> */}
-     <LandingCloudsSection/> 
-    <BestSellingSection/>
-    {/* <TrensingNowTextBox/> */}
-   <TabsExclusive/>
-   <TrensingNowTextBox/> 
-    <LandingPageSectionForTrending/>
-    <TrensingNowTextBox/>
-    <Feedbacks />
+      <LandingCloudsSection />
+      <BestSellingSection />
+      <TabsExclusive />
+      <TrensingNowTextBox />
+      <LandingPageSectionForTrending />
+      <TrensingNowTextBox />
+      <Feedbacks />
 
-    <TrensingNowTextBox/> 
-    
-  </WrapperCard>
-
-  
-  )
+      <TrensingNowTextBox />
+    </WrapperCard>
+  );
 }
 const WrapperCard = styled.div`
   background-color: #fff;
   height: 100vh;
- 
 `;
