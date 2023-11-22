@@ -6,17 +6,19 @@ import LandingPageSectionForTrending from "../Components/LandingPageSectionForTr
 import SideBar from "../Components/SideBar";
 import BestSellingSection from "../Components/BestSellingSection";
 import Feedbacks from "../Components/FeedBack";
-import Airoplane from "./Airoplane";
+
 import TabsExclusive from "../Components/TabsExclusive/TabsExclusive";
+import Airoplane from "./Aeroplane";
 // import { TabsExclusive } from '../Components/TabsExclusive/TabsExclusive';
 
 export default function LandingPage() {
   return (
     <WrapperCard>
-      {/* <Airoplane /> */}
+      <Airoplane />
       {/* <SideBar/> */}
       <LandingCloudsSection />
       <BestSellingSection />
+      {/* <TrensingNowTextBox/> */}
       <TabsExclusive />
       <TrensingNowTextBox />
       <LandingPageSectionForTrending />

@@ -157,7 +157,7 @@ export default function BestSellingSection() {
     },
   };
   return (
-    <Wrapper>
+    <Wrapper >
       <HotSellingSection>
         <div className="headingLabel">
           <span>Hot-Selling </span>Tour Bundles
@@ -331,8 +331,8 @@ const ImgStyle = styled.img`
   transition: transform 0.3s ease;
 `;
 const Wrapper = styled.div`
-height: calc(100vh - 170px);
-  bottom: 170px;
+height: calc(100vh - 100px);
+  bottom: 100px;
 /* background-color: red; */
   position: relative;
 `;
