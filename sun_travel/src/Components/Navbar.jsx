@@ -13,7 +13,13 @@ import { Link, Link as LinkRouter } from "react-router-dom";
 import LandingPage from "../Pages/LandingPage";
 import { useEffect, useState } from "react";
 import NavbarStyle from "./NavbarStyle";
-import { atestationDropdown, certificateDropdown, navItems, tourDropdown } from "./NavItems";
+import {
+  atestationDropdown,
+  certificateDropdown,
+  moreDropDown,
+  navItems,
+  tourDropdown,
+} from "./NavItems";
 import Dropdown from "./TourDropDown";
 export default function Navbar() {
   const Menus = [
@@ -23,7 +29,7 @@ export default function Navbar() {
     { name: "Photos", icon: "camera-outline", dis: "translate-x-48" },
     { name: "Settings", icon: "settings-outline", dis: "translate-x-64" },
   ];
-  
+
   const [navbar, setNavbar] = useState(false);
   console.log(navbar, "navbar");
   useEffect(() => {
@@ -43,6 +49,7 @@ export default function Navbar() {
   const [tourDropdownShow, setourDropdownShow] = useState(false);
   const [attestationDropdownShow, setAttestationDropdownShow] = useState(false);
   const [certificateDropdownShow, setCertificateDropdownShow] = useState(false);
+  const [showMore, setShowMore] = useState(false);
   return (
     <MainWrapper>
       {/* <Slide top> */}
@@ -64,7 +71,9 @@ export default function Navbar() {
                       onMouseEnter={() => setourDropdownShow(true)}
                       onMouseLeave={() => setourDropdownShow(false)}
                     >
-                      <Link to={item.path}>{item.title}</Link>
+                      <Link to={item.path}>
+                        {item.title} <img src={item.icon} alt="" />
+                      </Link>
                       {tourDropdownShow && <Dropdown data={tourDropdown} />}
                     </li>
                   );
@@ -77,8 +86,12 @@ export default function Navbar() {
                       onMouseEnter={() => setAttestationDropdownShow(true)}
                       onMouseLeave={() => setAttestationDropdownShow(false)}
                     >
-                      <Link to={item.path}>{item.title}</Link>
-                      {attestationDropdownShow && <Dropdown data={atestationDropdown} />}
+                      <Link to={item.path}>
+                        {item.title} <img src={item.icon} alt="" />
+                      </Link>
+                      {attestationDropdownShow && (
+                        <Dropdown data={atestationDropdown} />
+                      )}
                     </li>
                   );
                 }
@@ -90,8 +103,27 @@ export default function Navbar() {
                       onMouseEnter={() => setCertificateDropdownShow(true)}
                       onMouseLeave={() => setCertificateDropdownShow(false)}
                     >
-                      <Link to={item.path}>{item.title}</Link>
-                      {certificateDropdownShow && <Dropdown data={certificateDropdown} />}
+                      <Link to={item.path}>
+                        {item.title} <img src={item.icon} alt="" />
+                      </Link>
+                      {certificateDropdownShow && (
+                        <Dropdown data={certificateDropdown} />
+                      )}
+                    </li>
+                  );
+                }
+                if (item.title === "") {
+                  return (
+                    <li
+                      key={item.id}
+                      className={item.cName}
+                      onMouseEnter={() => setShowMore(true)}
+                      onMouseLeave={() => setShowMore(false)}
+                    >
+                      <Link to={item.path}>
+                        {item.title} <img src={item.icon} alt="" />
+                      </Link>
+                      {showMore && <Dropdown data={moreDropDown} />}
                     </li>
                   );
                 }
@@ -103,6 +135,16 @@ export default function Navbar() {
               })}
             </ul>
           </NavPagesWrapper>
+          <HeaderMenu>
+            <HeaderUl>
+              <HeaderLi><img src={img1} alt=""/></HeaderLi>
+              <HeaderLi><img src={img2} alt=""/></HeaderLi>
+              <HeaderLi><img src={img3} alt=""/></HeaderLi>
+              <HeaderLi><img src={img4} alt=""/></HeaderLi>
+              <HeaderLi><img src={img5} alt=""/></HeaderLi>
+              <HeaderLi><img src={img6} alt=""/></HeaderLi>
+            </HeaderUl>
+          </HeaderMenu>
         </HeaderWrapper>
       </Wrapper>
     </MainWrapper>
@@ -112,7 +154,7 @@ const NavPagesWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  gap: 10px;
+  padding: 0 0 0 80px;
   .pageName {
     padding-top: 6px;
     display: flex;
@@ -129,6 +171,7 @@ const MainWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  border-bottom: 1px solid #ffffff;
   /* background: rgb(255 255 255 / 20%); */
   z-index: 99;
   top: 0;
@@ -193,8 +236,7 @@ const HeaderLi = styled.li`
   padding: 0 3px;
   text-transform: capitalize;
   letter-spacing: 1.5px;
-  font-size: 16px;
-  background: #fff;
+  font-size: 13px;
   margin-left: 5px;
   border-radius: 5px;
   box-shadow: #463b3bde;

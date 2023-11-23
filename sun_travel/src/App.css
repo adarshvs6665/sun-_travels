@@ -43,9 +43,9 @@
 .navbar {
   background: transparent;
   justify-content: flex-start;
-  gap: 100px;
+  gap: 5px;
   align-items: center;
-  padding: 10px 80px;
+  padding: 10px 20px;
   transition: background 250ms ease-in;
   margin: 0 auto;
   display: flex;
@@ -61,7 +61,6 @@
   display: flex;
   list-style: none;
   text-align: center;
-  width: 70vw;
   justify-content: flex-end;
   margin-right: 2rem;
   transition: background 250ms ease-in;
@@ -81,12 +80,23 @@
   padding: 6px 16px;
   border-radius: 10px;
   transition: background 250ms ease-in;
+  display: flex;
+  align-items: center;
+}
+.nav-item a img {
+  filter: brightness(0) invert(1);
+  margin-left: 6px;
+  height: 16px;
+  width: 16px;
 }
 
 .nav-item a:hover {
   background: rgb(234, 234, 234);
   color: #000;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.nav-item a:hover img {
+  filter: none;
 }
 .services-submenu {
   min-width: 10rem;
@@ -97,7 +107,10 @@
   text-align: start;
   border-radius: 10px;
 }
-
+.more-icon a img {
+  height: 30px;
+  width: 30px;
+}
 .services-submenu li {
   background: rgb(234, 234, 234);
   cursor: pointer;
@@ -133,6 +146,9 @@
   padding: 16px;
 }
 .feed-card {
-  background: radial-gradient(black, transparent);
+  background: radial-gradient(#66339961, #0000ff54);
   margin: 40px 80px;
+}
+.card-wrapper {
+  background: #001499a1;
 }
