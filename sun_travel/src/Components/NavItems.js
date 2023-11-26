@@ -1,4 +1,4 @@
-import dropDownArrow from "./assets/dropDown.png";
+import dropDownArrow from "./assets/dropdown.png";
 import more from "./assets/more.png";
 export const navItems = [
   {

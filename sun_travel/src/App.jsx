@@ -1,4 +1,5 @@
 import "./App.css";
+import './Custom.css'
 
 import { useEffect, useState } from "react";
 import LandingPage from "./Pages/LandingPage";

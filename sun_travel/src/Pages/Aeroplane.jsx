@@ -105,6 +105,8 @@ const AeroplaneModel = () => {
     </group>
   );
 };
+
+
 const Airoplane = () => {
   return (
     <Container id="aeroplane-model">
@@ -120,6 +122,7 @@ const Airoplane = () => {
         <AdaptiveDpr pixelated />
         {/* <AdaptiveEvents /> */}
         {/* <OrbitControls  /> */}
+        
       </Canvas>
     </Container>
   );

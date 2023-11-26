@@ -11,7 +11,7 @@ import "react-multi-carousel/lib/styles.css";
 import maldives from "./assets/maldives.jpg";
 import dubai from "./assets/duabi.jpg";
 import thailand from "./assets/Thailand.jpg";
-export default function BestSellingSection() {
+export default function BestSellingSection({bestSellingRef}) {
   const HotSellTourDetails = [
     {
       id: 1,
@@ -157,7 +157,7 @@ export default function BestSellingSection() {
     },
   };
   return (
-    <Wrapper >
+    <Wrapper ref={bestSellingRef} >
       <HotSellingSection>
         <div className="headingLabel">
           <span>Hot-Selling </span>Tour Bundles
@@ -355,7 +355,7 @@ const HotSellingSection = styled.div`
     font-family: "Lato";
     font-size: 40px;
     text-align: left;
-    padding: 15px 90px;
+    padding: 10vh 90px;
     font-weight: 300;
     span {
       font-weight: 700;

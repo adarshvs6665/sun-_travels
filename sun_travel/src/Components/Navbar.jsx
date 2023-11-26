@@ -171,8 +171,9 @@ const MainWrapper = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  border-bottom: 1px solid #ffffff;
-  /* background: rgb(255 255 255 / 20%); */
+  // border-bottom: 1px solid #ffffff;
+  // background: rgb(255 255 255 / 20%);
+  // background-color: #85aeff;
   z-index: 99;
   top: 0;
   left: 0;
